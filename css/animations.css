@@ -200,7 +200,7 @@
 
 /* Slide From Left */
 .reveal-left {
-  transform: translateX(-50px);
+  transform: translateX(-40px);
 }
 
 .reveal-left.active {
@@ -210,12 +210,25 @@
 
 /* Slide From Right */
 .reveal-right {
-  transform: translateX(50px);
+  transform: translateX(40px);
 }
 
 .reveal-right.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* On mobile/tablet screens, convert horizontal reveals to vertical to prevent viewport overflow */
+@media (max-width: 992px) {
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(30px);
+  }
+
+  .reveal-left.active,
+  .reveal-right.active {
+    transform: translateY(0);
+  }
 }
 
 /* Scale Up Zoom */
