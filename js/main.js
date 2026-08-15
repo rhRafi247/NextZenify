@@ -68,28 +68,43 @@ function initStickyNavbar() {
 function initMobileNav() {
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+  const closeBtn = document.querySelector('.mobile-nav-close, #mobile-nav-close');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-  if (!hamburger || !mobileOverlay) return;
+  if (!mobileOverlay) return;
 
   const toggleMenu = () => {
-    const isOpen = hamburger.classList.toggle('active');
+    const isOpen = !mobileOverlay.classList.contains('open');
+    if (hamburger) hamburger.classList.toggle('active', isOpen);
     mobileOverlay.classList.toggle('open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (hamburger) hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   };
 
   const closeMenu = () => {
-    hamburger.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
     mobileOverlay.classList.remove('open');
     document.body.style.overflow = '';
-    hamburger.setAttribute('aria-expanded', 'false');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
   };
 
-  hamburger.addEventListener('click', toggleMenu);
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+  }
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
+  });
+
+  // Close when clicking outside of links/content
+  mobileOverlay.addEventListener('click', (e) => {
+    if (e.target === mobileOverlay) {
+      closeMenu();
+    }
   });
 
   // Close when pressing Escape key
