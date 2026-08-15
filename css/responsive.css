@@ -99,11 +99,6 @@ img, svg, video, canvas {
     justify-content: space-between !important;
   }
 
-  .nav-brand {
-    display: flex !important;
-    align-items: center !important;
-  }
-
   .nav-brand img {
     height: 38px !important;
     max-width: 180px !important;
@@ -144,17 +139,18 @@ img, svg, video, canvas {
     max-width: 680px !important;
     margin: 0 auto !important;
     text-align: center !important;
+    min-width: 0 !important;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 5.5vw, 2.75rem) !important;
+    font-size: clamp(1.95rem, 5.5vw, 2.75rem) !important;
     line-height: 1.2 !important;
     width: 100% !important;
     max-width: 100% !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    hyphens: auto !important;
     margin: 0 auto 18px auto !important;
+    text-align: center !important;
   }
 
   .hero-desc {
@@ -163,6 +159,8 @@ img, svg, video, canvas {
     max-width: 100% !important;
     margin: 0 auto 28px auto !important;
     text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 
   .badge-tag {
@@ -200,6 +198,7 @@ img, svg, video, canvas {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    min-width: 0 !important;
   }
 
   .hero-card-container {
@@ -207,6 +206,20 @@ img, svg, video, canvas {
     max-width: 100% !important;
     padding: 22px 16px !important;
     box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .code-viewport {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 240px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .code-block {
+    font-size: 0.76rem !important;
+    line-height: 1.55 !important;
   }
 
   /* Re-stack floating badges smoothly on mobile */
@@ -264,16 +277,46 @@ img, svg, video, canvas {
   }
 
   /* Grids adjustments */
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-  }
-
+  .services-grid,
+  .projects-grid,
+  .features-grid,
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 22px !important;
+  }
+
+  .project-thumb {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .project-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .project-body {
+    padding: 22px 18px !important;
+  }
+
+  .project-title {
+    font-size: 1.25rem !important;
+  }
+
+  .project-desc {
+    font-size: 0.92rem !important;
+  }
+
+  .team-avatar-wrap {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 18px auto !important;
+  }
+
+  .team-card {
+    padding: 26px 18px !important;
   }
 
   /* Footer Layout for Tablets */
@@ -302,12 +345,13 @@ img, svg, video, canvas {
   }
 
   .section-title {
-    font-size: 1.95rem !important;
+    font-size: clamp(1.65rem, 5vw, 2.1rem) !important;
     line-height: 1.25 !important;
   }
 
   .section-subtitle {
-    font-size: 1rem !important;
+    font-size: clamp(0.92rem, 3.2vw, 1.05rem) !important;
+    line-height: 1.6 !important;
   }
 
   /* Form Responsive Styles */
@@ -316,19 +360,40 @@ img, svg, video, canvas {
     gap: 16px !important;
   }
 
-  .form-card {
+  .form-card,
+  .contact-info-card,
+  .glass-card,
+  .service-card,
+  .feature-box,
+  .testimonial-card {
     padding: 24px 16px !important;
     border-radius: var(--radius-md) !important;
   }
 
-  .contact-info-card {
-    padding: 24px 16px !important;
-    border-radius: var(--radius-md) !important;
+  .service-icon-wrap {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 18px !important;
   }
 
-  .glass-card {
-    padding: 22px 16px !important;
-    border-radius: var(--radius-md) !important;
+  .service-title {
+    font-size: 1.22rem !important;
+  }
+
+  .feature-icon {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .stat-card {
+    padding: 20px 12px !important;
+  }
+
+  .stat-number {
+    font-size: 2.2rem !important;
   }
 
   /* Form inputs touch accessibility (prevent iOS auto-zoom) */
@@ -346,14 +411,6 @@ img, svg, video, canvas {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px !important;
-  }
-
-  .stat-card {
-    padding: 20px 14px !important;
-  }
-
-  .stat-card .stat-number {
-    font-size: 2rem !important;
   }
 
   /* CTA Banner Box */
@@ -452,6 +509,7 @@ img, svg, video, canvas {
   /* Brand Logo in Nav */
   .nav-brand img {
     height: 34px !important;
+    max-width: 160px !important;
   }
 
   /* Full Width Buttons */
@@ -468,7 +526,7 @@ img, svg, video, canvas {
 
   /* Hero Section */
   .hero-title {
-    font-size: 1.85rem !important;
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem) !important;
     line-height: 1.22 !important;
     margin-bottom: 14px !important;
   }
@@ -506,7 +564,8 @@ img, svg, video, canvas {
   }
 
   .code-viewport {
-    min-height: 220px !important;
+    min-height: auto !important;
+    max-height: 240px !important;
   }
 
   .code-block {
@@ -527,6 +586,19 @@ img, svg, video, canvas {
   .values-grid {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
+  }
+
+  .project-body {
+    padding: 18px 14px !important;
+  }
+
+  .project-title {
+    font-size: 1.15rem !important;
+  }
+
+  .team-avatar-wrap {
+    width: 110px !important;
+    height: 110px !important;
   }
 
   /* Newsletter Form */
@@ -566,11 +638,11 @@ img, svg, video, canvas {
    -------------------------------------------------------------------------- */
 @media (max-width: 360px) {
   .hero-title {
-    font-size: 1.65rem !important;
+    font-size: 1.6rem !important;
   }
 
   .section-title {
-    font-size: 1.5rem !important;
+    font-size: 1.45rem !important;
   }
 
   .code-block {

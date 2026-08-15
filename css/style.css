@@ -2287,6 +2287,41 @@ textarea.form-control {
   .features-grid,
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 22px !important;
+  }
+
+  .project-thumb {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .project-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .project-body {
+    padding: 22px 18px !important;
+  }
+
+  .project-title {
+    font-size: 1.25rem !important;
+  }
+
+  .project-desc {
+    font-size: 0.92rem !important;
+  }
+
+  .team-avatar-wrap {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 18px auto !important;
+  }
+
+  .team-card {
+    padding: 26px 18px !important;
   }
 
   .footer-grid {
@@ -2307,13 +2342,48 @@ textarea.form-control {
   }
 
   .section-title {
-    font-size: 1.95rem !important;
+    font-size: clamp(1.65rem, 5vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .section-subtitle {
+    font-size: clamp(0.92rem, 3.2vw, 1.05rem) !important;
+    line-height: 1.6 !important;
   }
 
   .form-card,
   .contact-info-card,
-  .glass-card {
+  .glass-card,
+  .service-card,
+  .feature-box,
+  .testimonial-card {
     padding: 24px 16px !important;
+  }
+
+  .service-icon-wrap {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .service-title {
+    font-size: 1.22rem !important;
+  }
+
+  .feature-icon {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .stat-card {
+    padding: 20px 12px !important;
+  }
+
+  .stat-number {
+    font-size: 2.2rem !important;
   }
 
   input[type="text"],
@@ -2369,6 +2439,7 @@ textarea.form-control {
 
   .nav-brand img {
     height: 34px !important;
+    max-width: 160px !important;
   }
 
   .btn {
@@ -2378,7 +2449,7 @@ textarea.form-control {
   }
 
   .hero-title {
-    font-size: 1.85rem !important;
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem) !important;
     line-height: 1.22 !important;
     margin-bottom: 14px !important;
   }
@@ -2410,7 +2481,8 @@ textarea.form-control {
   }
 
   .code-viewport {
-    min-height: 220px !important;
+    min-height: auto !important;
+    max-height: 240px !important;
   }
 
   .code-block {
@@ -2426,6 +2498,19 @@ textarea.form-control {
   .values-grid {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
+  }
+
+  .project-body {
+    padding: 18px 14px !important;
+  }
+
+  .project-title {
+    font-size: 1.15rem !important;
+  }
+
+  .team-avatar-wrap {
+    width: 110px !important;
+    height: 110px !important;
   }
 
   .newsletter-form {
