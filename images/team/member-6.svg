@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" fill="none">
+  <defs>
+    <linearGradient id="t6-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a24"/>
+      <stop offset="100%" stop-color="#122b3b"/>
+    </linearGradient>
+    <linearGradient id="t6-halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="t6-glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="400" height="450" rx="20" fill="url(#t6-bg)" stroke="rgba(0,242,254,0.3)" stroke-width="2"/>
+  <circle cx="200" cy="180" r="110" stroke="url(#t6-halo)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="200" cy="170" r="85" fill="#122b3b" stroke="url(#t6-halo)" stroke-width="4" filter="url(#t6-glow)"/>
+  
+  <path d="M120 330 C120 260, 280 260, 280 330 L280 430 L120 430 Z" fill="#0d2230" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <!-- Cybersecurity badge on chest -->
+  <path d="M200 285 L215 295 L215 315 L200 325 L185 315 L185 295 Z" fill="#00f2fe" opacity="0.4"/>
+  <!-- Head & Hair (Sleek High Ponytail) -->
+  <circle cx="200" cy="165" r="48" fill="#fcd34d"/>
+  <path d="M145 160 C145 105, 255 105, 255 160 C255 125, 230 110, 200 110 C170 110, 145 125, 145 160 Z" fill="#0f172a"/>
+  <path d="M225 125 C260 90, 280 120, 290 160" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+  <!-- Cyber Earring -->
+  <circle cx="150" cy="175" r="4" fill="#00f2fe" filter="url(#t6-glow)"/>
+  <path d="M192 195 Q200 201, 208 195" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

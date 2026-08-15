@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" fill="none">
+  <defs>
+    <linearGradient id="t2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14092b"/>
+      <stop offset="100%" stop-color="#241042"/>
+    </linearGradient>
+    <linearGradient id="t2-halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="t2-glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="400" height="450" rx="20" fill="url(#t2-bg)" stroke="rgba(139,92,246,0.3)" stroke-width="2"/>
+  <circle cx="200" cy="180" r="110" stroke="url(#t2-halo)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="200" cy="170" r="85" fill="#241042" stroke="url(#t2-halo)" stroke-width="4" filter="url(#t2-glow)"/>
+  <!-- Woman Tech Lead -->
+  <path d="M120 330 C120 260, 280 260, 280 330 L280 430 L120 430 Z" fill="#180b33" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <!-- Head & Long Stylish Hair -->
+  <path d="M140 160 C130 250, 160 300, 170 310" stroke="#7c3aed" stroke-width="20" stroke-linecap="round"/>
+  <path d="M260 160 C270 250, 240 300, 230 310" stroke="#7c3aed" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="200" cy="165" r="48" fill="#e0ac69"/>
+  <path d="M145 155 C145 105, 255 105, 255 155 C255 120, 235 110, 200 110 C165 110, 145 120, 145 155 Z" fill="#4c1d95"/>
+  <!-- Headset / Tech Device -->
+  <path d="M148 165 C148 120, 252 120, 252 165" fill="none" stroke="#ec4899" stroke-width="3"/>
+  <circle cx="148" cy="165" r="8" fill="#ec4899"/>
+  <circle cx="252" cy="165" r="8" fill="#ec4899"/>
+  <path d="M192 195 Q200 202, 208 195" stroke="#ec4899" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

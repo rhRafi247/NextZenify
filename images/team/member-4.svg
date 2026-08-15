@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" fill="none">
+  <defs>
+    <linearGradient id="t4-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#190e24"/>
+      <stop offset="100%" stop-color="#2d1742"/>
+    </linearGradient>
+    <linearGradient id="t4-halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="t4-glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="400" height="450" rx="20" fill="url(#t4-bg)" stroke="rgba(168,85,247,0.3)" stroke-width="2"/>
+  <circle cx="200" cy="180" r="110" stroke="url(#t4-halo)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="200" cy="170" r="85" fill="#2d1742" stroke="url(#t4-halo)" stroke-width="4" filter="url(#t4-glow)"/>
+  
+  <path d="M120 330 C120 260, 280 260, 280 330 L280 430 L120 430 Z" fill="#1b0e2b" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <!-- UI Designer Pen icon badge on chest -->
+  <circle cx="200" cy="300" r="15" fill="#a855f7" opacity="0.4"/>
+  <path d="M195 305 L205 295" stroke="#38bdf8" stroke-width="3"/>
+  <!-- Head & Chic Bob Haircut -->
+  <circle cx="200" cy="165" r="48" fill="#d2996d"/>
+  <path d="M140 170 C140 100, 260 100, 260 170 C260 210, 245 220, 245 220 L230 170 L170 170 L155 220 C155 220, 140 210, 140 170 Z" fill="#38184c"/>
+  <!-- Stylish Round Glasses -->
+  <circle cx="180" cy="165" r="14" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <circle cx="220" cy="165" r="14" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <line x1="194" y1="165" x2="206" y2="165" stroke="#a855f7" stroke-width="2"/>
+  <path d="M192 195 Q200 203, 208 195" stroke="#f472b6" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <defs>
+    <linearGradient id="p7-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1526"/>
+      <stop offset="100%" stop-color="#1b253d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#p7-bg)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <rect x="20" y="20" width="560" height="40" rx="8" fill="#1e2c4c"/>
+  <rect x="40" y="32" width="180" height="16" rx="8" fill="#293b64"/>
+  
+  <!-- Kanban Board Layout -->
+  <g transform="translate(40, 80)">
+    <!-- Column 1: Backlog -->
+    <rect width="160" height="250" rx="10" fill="#141d33" stroke="rgba(255,255,255,0.05)"/>
+    <text x="15" y="28" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700">Sprint Backlog (3)</text>
+    <rect x="12" y="45" width="136" height="55" rx="6" fill="#1c2946"/>
+    <text x="22" y="68" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">Auth Migration</text>
+    <text x="22" y="85" fill="#3b82f6" font-family="sans-serif" font-size="9">HIGH PRIORITY</text>
+    <rect x="12" y="110" width="136" height="55" rx="6" fill="#1c2946"/>
+    <text x="22" y="133" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">GraphQL Subscriptions</text>
+    <text x="22" y="150" fill="#00f2fe" font-family="sans-serif" font-size="9">FEATURE</text>
+
+    <!-- Column 2: In Progress -->
+    <rect x="180" y="0" width="160" height="250" rx="10" fill="#141d33" stroke="rgba(255,255,255,0.05)"/>
+    <text x="195" y="28" fill="#3b82f6" font-family="sans-serif" font-size="12" font-weight="700">In Progress (2)</text>
+    <rect x="192" y="45" width="136" height="65" rx="6" fill="#1c2946" stroke="rgba(59,130,246,0.4)"/>
+    <text x="202" y="68" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">Payment Webhooks</text>
+    <text x="202" y="85" fill="#8b5cf6" font-family="sans-serif" font-size="9">CORE BACKEND</text>
+    <rect x="202" y="93" width="80" height="4" rx="2" fill="#3b82f6"/>
+
+    <!-- Column 3: Done -->
+    <rect x="360" y="0" width="160" height="250" rx="10" fill="#141d33" stroke="rgba(255,255,255,0.05)"/>
+    <text x="375" y="28" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="700">Completed (12)</text>
+    <rect x="372" y="45" width="136" height="55" rx="6" fill="#1c2946"/>
+    <text x="382" y="68" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">Cluster Auto-scale</text>
+    <text x="382" y="85" fill="#10b981" font-family="sans-serif" font-size="9">VERIFIED DEPLOY</text>
+  </g>
+</svg>

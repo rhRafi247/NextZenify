@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" fill="none">
+  <defs>
+    <linearGradient id="p2-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#1c2541"/>
+    </linearGradient>
+    <linearGradient id="p2-card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="p2-glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#p2-bg)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <!-- UI Header -->
+  <rect x="20" y="20" width="560" height="40" rx="8" fill="#15203b"/>
+  <rect x="40" y="32" width="180" height="16" rx="8" fill="#1e2d52"/>
+  <!-- Credit Card Hologram -->
+  <g transform="translate(60, 90)">
+    <rect width="260" height="160" rx="14" fill="url(#p2-card)" filter="url(#p2-glow)"/>
+    <circle cx="210" cy="45" r="22" fill="rgba(255,255,255,0.2)"/>
+    <circle cx="230" cy="45" r="22" fill="rgba(255,255,255,0.15)"/>
+    <rect x="25" y="40" width="38" height="28" rx="5" fill="#ffd700" opacity="0.9"/>
+    <text x="25" y="115" fill="#ffffff" font-family="monospace" font-size="14" letter-spacing="2">•••• •••• •••• 8492</text>
+    <text x="25" y="140" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-size="11">NEXPAY PLATINUM</text>
+  </g>
+  <!-- Transactions List -->
+  <g transform="translate(350, 80)">
+    <rect width="210" height="260" rx="12" fill="#121b33" stroke="rgba(255,255,255,0.05)"/>
+    <text x="20" y="32" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">Recent Transfers</text>
+    
+    <!-- item 1 -->
+    <rect x="15" y="50" width="180" height="50" rx="8" fill="#182342"/>
+    <circle cx="35" cy="75" r="14" fill="#00f2fe" opacity="0.2"/>
+    <text x="31" y="79" fill="#00f2fe" font-size="12">↗</text>
+    <text x="58" y="70" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">Stripe Global</text>
+    <text x="58" y="85" fill="#94a3b8" font-family="sans-serif" font-size="9">API Gateway</text>
+    <text x="145" y="78" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">+$12.4k</text>
+
+    <!-- item 2 -->
+    <rect x="15" y="110" width="180" height="50" rx="8" fill="#182342"/>
+    <circle cx="35" cy="135" r="14" fill="#8b5cf6" opacity="0.2"/>
+    <text x="31" y="139" fill="#8b5cf6" font-size="12">↙</text>
+    <text x="58" y="130" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">AWS Cloud</text>
+    <text x="58" y="145" fill="#94a3b8" font-family="sans-serif" font-size="9">Infrastructure</text>
+    <text x="148" y="138" fill="#ef4444" font-family="sans-serif" font-size="11" font-weight="700">-$2.8k</text>
+
+    <!-- item 3 -->
+    <rect x="15" y="170" width="180" height="50" rx="8" fill="#182342"/>
+    <circle cx="35" cy="195" r="14" fill="#3b82f6" opacity="0.2"/>
+    <text x="31" y="199" fill="#3b82f6" font-size="12">↗</text>
+    <text x="58" y="190" fill="#fff" font-family="sans-serif" font-size="11" font-weight="600">Nordic Corp</text>
+    <text x="58" y="205" fill="#94a3b8" font-family="sans-serif" font-size="9">Subscription</text>
+    <text x="145" y="198" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">+$48.0k</text>
+  </g>
+  <!-- Bottom Security Badge -->
+  <rect x="60" y="280" width="260" height="60" rx="10" fill="#152244" stroke="rgba(0,242,254,0.3)"/>
+  <circle cx="90" cy="310" r="16" fill="#10b981" opacity="0.2"/>
+  <path d="M85 310 L89 314 L96 306" stroke="#10b981" stroke-width="2" fill="none"/>
+  <text x="115" y="306" fill="#fff" font-family="sans-serif" font-size="12" font-weight="700">256-Bit SSL Enforced</text>
+  <text x="115" y="322" fill="#94a3b8" font-family="sans-serif" font-size="10">Zero-trust transaction processing</text>
+</svg>

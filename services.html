@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | NextZenify Technologies - Full-Spectrum Software Engineering</title>
+  <meta name="description" content="Explore NextZenify Technologies core services: Web Development, Web Applications, Custom Software, UI/UX Design, E-Commerce, API Development, Database Solutions, and 24/7 Maintenance." />
+  <meta name="keywords" content="web development, web application development, custom software, UI UX design, ecommerce development, API development, database solutions, software maintenance" />
+  <meta name="author" content="NextZenify Technologies" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services | NextZenify Technologies" />
+  <meta property="og:description" content="Custom software engineering and modern technology solutions engineered for scale." />
+  <meta property="og:image" content="images/logo/logo.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="page-preloader">
+    <div class="loader-brand">
+      <img src="images/logo/favicon.svg" alt="NextZenify" class="loader-logo" />
+      <div class="loader-text">NEXT<span class="text-cyan">ZENIFY</span></div>
+      <div class="loader-bar-container">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Canvas & Ambient Blobs -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-ambient-blob blob-1"></div>
+  <div class="bg-ambient-blob blob-2"></div>
+  <div class="bg-ambient-blob blob-3"></div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="NextZenify Technologies Home">
+        <img src="images/logo/logo.svg" alt="NextZenify Technologies Logo" />
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <span>Get in Touch</span>
+          <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" aria-hidden="true">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link active">Services</a>
+      <a href="projects.html" class="mobile-nav-link">Projects</a>
+      <a href="team.html" class="mobile-nav-link">Team</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Get Started</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section" style="padding-top: calc(var(--nav-height) + 60px); padding-bottom: 60px;">
+      <div class="container text-center">
+        <div class="section-header reveal">
+          <div class="badge-tag">OUR EXPERTISE</div>
+          <h1 class="section-title">Enterprise Technology &amp; <span class="text-gradient">Engineering Services</span></h1>
+          <p class="section-subtitle" style="max-width: 780px; margin: 0 auto;">
+            From high-converting web experiences to distributed cloud computing engines, we provide end-to-end technical capabilities tailored to your business roadmap.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 SERVICE CARDS SECTION -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          
+          <!-- 1. Web Development -->
+          <div class="glass-card service-card reveal delay-100 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🌐</div>
+              <h3 class="service-title">1. Web Development</h3>
+              <p class="service-desc">
+                High-performance, responsive, and SEO-optimized corporate websites built with clean code and glassmorphic modern aesthetics.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Next-Gen Semantic HTML5 / CSS3</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Perfect Core Web Vitals &amp; 100/100 Lighthouse</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Headless CMS &amp; Static Site Generation</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=web-dev" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Web Application Development -->
+          <div class="glass-card service-card reveal delay-200 tilt-card">
+            <div>
+              <div class="service-icon-wrap">💻</div>
+              <h3 class="service-title">2. Web Applications</h3>
+              <p class="service-desc">
+                Robust, interactive Single Page Applications (SPAs) and multi-tenant SaaS portals engineered for peak concurrent user loads.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> React, Vue, Next.js &amp; TypeScript</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time WebSockets &amp; State Management</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Enterprise Role-Based Access Control (RBAC)</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=web-apps" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Software Development -->
+          <div class="glass-card service-card reveal delay-300 tilt-card">
+            <div>
+              <div class="service-icon-wrap">⚙️</div>
+              <h3 class="service-title">3. Software Development</h3>
+              <p class="service-desc">
+                Custom enterprise software, distributed microservices, background queues, and automated data synchronization pipelines.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Node.js, Python, Go &amp; Rust Backends</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Event-Driven Architecture &amp; Kafka</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Containerized Kubernetes Deployments</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=custom-software" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. UI/UX Design -->
+          <div class="glass-card service-card reveal delay-400 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🎨</div>
+              <h3 class="service-title">4. UI/UX Design</h3>
+              <p class="service-desc">
+                Human-centered visual design, interactive design systems, wireframing, WebGL graphics, and frictionless customer onboarding journeys.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Figma Design Systems &amp; Tokens</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Glassmorphic UI &amp; Micro-Animations</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Conversion Rate Optimization (CRO)</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=ui-ux" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. E-commerce Development -->
+          <div class="glass-card service-card reveal delay-100 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🛍️</div>
+              <h3 class="service-title">5. E-Commerce Solutions</h3>
+              <p class="service-desc">
+                Scalable headless storefronts, frictionless 1-click checkout flows, and automated inventory sync built for high flash-sale volumes.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Headless Shopify Plus &amp; Custom Storefronts</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Stripe, PayPal &amp; Crypto Payments</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Currency &amp; Automated Tax Routing</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=ecommerce" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. API Development -->
+          <div class="glass-card service-card reveal delay-200 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🔌</div>
+              <h3 class="service-title">6. API Development</h3>
+              <p class="service-desc">
+                Ultra-fast RESTful and GraphQL API gateways, secure OAuth2 token authentication, third-party integrations, and webhooks.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Throughput REST &amp; GraphQL</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Rate-limiting &amp; API Key Gateways</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Swagger / OpenAPI Auto-Documentation</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=api-dev" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Database Solutions -->
+          <div class="glass-card service-card reveal delay-300 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🗄️</div>
+              <h3 class="service-title">7. Database Solutions</h3>
+              <p class="service-desc">
+                Relational and NoSQL database modeling, read-replica clustering, Redis caching layers, query optimization, and data security.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> PostgreSQL, MySQL, MongoDB &amp; Redis</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Auto-Failover &amp; Automated Backups</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Performance Sharding &amp; Indexing</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=database" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. Maintenance & Support -->
+          <div class="glass-card service-card reveal delay-400 tilt-card">
+            <div>
+              <div class="service-icon-wrap">🛡️</div>
+              <h3 class="service-title">8. Maintenance &amp; SRE</h3>
+              <p class="service-desc">
+                24/7/365 infrastructure monitoring, SLA guarantees, automated security patching, performance audits, and dedicated engineering.
+              </p>
+              <ul class="service-features">
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 99.99% Availability SLA Guarantees</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero-Downtime Hotfix Deployments</li>
+                <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-Time Sentry &amp; Datadog Telemetry</li>
+              </ul>
+            </div>
+            <div class="service-footer">
+              <a href="contact.html?service=maintenance" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODELS -->
+    <section class="section" style="background: rgba(13, 18, 36, 0.4);">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="badge-tag">FLEXIBLE PARTNERSHIPS</div>
+          <h2 class="section-title">Transparent <span class="text-gradient">Engagement Models</span></h2>
+          <p class="section-subtitle">
+            Tailored cooperation models designed to align seamlessly with your internal roadmap and budget constraints.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Model 1 -->
+          <div class="glass-card reveal delay-100 tilt-card">
+            <h3 style="font-size: 1.4rem; color: var(--accent-cyan); margin-bottom: 8px;">Dedicated Squad</h3>
+            <p style="margin-bottom: 20px;">A full-stack cross-functional team (Frontend, Backend, QA, UI/UX, PM) embedded into your operations.</p>
+            <ul class="service-features" style="margin-bottom: 24px;">
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Dedicated Full-Time Talent</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct Slack &amp; Jira Collaboration</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Agile Sprint Velocity Scaling</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Hire Dedicated Squad</a>
+          </div>
+
+          <!-- Model 2 -->
+          <div class="glass-card reveal delay-200 tilt-card" style="border-color: rgba(0, 242, 254, 0.4); box-shadow: var(--glow-cyan);">
+            <div class="badge-tag" style="margin-bottom: 10px;">MOST POPULAR</div>
+            <h3 style="font-size: 1.4rem; color: var(--text-highlight); margin-bottom: 8px;">Fixed-Scope Project</h3>
+            <p style="margin-bottom: 20px;">Defined timeline, precise deliverables, fixed budget, and guaranteed milestone handoffs.</p>
+            <ul class="service-features" style="margin-bottom: 24px;">
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Clear Milestones &amp; SOW</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 0% Budget Overruns Guarantee</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Post-Launch Warranty Period</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Request Proposal</a>
+          </div>
+
+          <!-- Model 3 -->
+          <div class="glass-card reveal delay-300 tilt-card">
+            <h3 style="font-size: 1.4rem; color: var(--accent-purple); margin-bottom: 8px;">Time &amp; Materials</h3>
+            <p style="margin-bottom: 20px;">Maximum flexibility for evolving MVPs, exploratory R&amp;D spikes, or specialized architectural audits.</p>
+            <ul class="service-features" style="margin-bottom: 24px;">
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Bi-weekly Timesheet Reporting</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pivot Priorities Instantly</li>
+              <li class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Flexible Scale-Up or Scale-Down</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Discuss Scope</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FAQ ACCORDION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="badge-tag">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title">Everything You <span class="text-gradient">Need To Know</span></h2>
+          <p class="section-subtitle">
+            Answers to common questions regarding our development process, tech stack, and engagement policies.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-question">How do you manage project communication and sprints?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <p>We work in 2-week Agile sprints with regular async updates via Slack/Discord and bi-weekly live video demos. You receive direct access to GitHub/GitLab repositories and Jira/Linear boards.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-question">Do I own the intellectual property and source code?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <p>Yes, 100%. Upon milestone completion and settlement, all source code, IP rights, designs, database schemas, and digital assets belong entirely to your company.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-question">Can NextZenify work with our existing codebase and in-house team?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <p>Absolutely. We frequently augment existing teams, conduct codebase refactoring, migrate legacy systems to modern architectures, or build brand-new standalone features.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-question">What is your typical turnaround time for an MVP?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <p>A production-ready MVP typically takes between 4 to 8 weeks depending on complexity. Enterprise platforms and large-scale SaaS systems generally follow a 3 to 6-month roadmap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-bottom: 120px;">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="badge-tag">SCHEDULE A DISCOVERY CALL</div>
+          <h2 class="cta-title">Ready To Transform Your <span class="text-gradient">Digital Architecture?</span></h2>
+          <p class="cta-desc">
+            Consult with our Principal Software Architects to evaluate your requirements and receive a comprehensive technical proposal.
+          </p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              <span>Book Technical Consultation</span>
+              <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/logo/logo.svg" alt="NextZenify Technologies Logo" style="height: 42px;" />
+          </a>
+          <p>Architecting next-generation digital products, high-availability software platforms, and human-centered design.</p>
+          <div class="team-socials" style="justify-content: flex-start;">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">gh</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">𝕏</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects Portfolio</a></li>
+            <li><a href="team.html">Our Team &amp; Culture</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Specializations</h5>
+          <ul class="footer-links">
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">Web Applications</a></li>
+            <li><a href="services.html">Custom Software</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">E-Commerce</a></li>
+            <li><a href="services.html">API &amp; Database Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h5>Newsletter</h5>
+          <p>Subscribe for enterprise technology updates.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Your work email" class="newsletter-input" required />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NextZenify Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

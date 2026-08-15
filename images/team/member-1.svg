@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" fill="none">
+  <defs>
+    <linearGradient id="t1-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="t1-halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <filter id="t1-glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="400" height="450" rx="20" fill="url(#t1-bg)" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+  <!-- Ambient halo ring -->
+  <circle cx="200" cy="180" r="110" stroke="url(#t1-halo)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6"/>
+  <!-- Portrait Base -->
+  <circle cx="200" cy="170" r="85" fill="#1e293b" stroke="url(#t1-halo)" stroke-width="4" filter="url(#t1-glow)"/>
+  <!-- Stylized modern tech silhouette / character -->
+  <!-- Shoulders / Suit -->
+  <path d="M120 330 C120 260, 280 260, 280 330 L280 430 L120 430 Z" fill="#0f172a" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <!-- Tie / Lapel -->
+  <path d="M185 270 L200 340 L215 270" fill="url(#t1-halo)"/>
+  <!-- Head & Hair -->
+  <circle cx="200" cy="165" r="48" fill="#f1c27d"/>
+  <path d="M152 165 C152 110, 248 110, 248 165 C248 140, 235 125, 200 125 C165 125, 152 140, 152 165 Z" fill="#334155"/>
+  <!-- Modern Smart Glasses -->
+  <rect x="172" y="156" width="22" height="14" rx="4" fill="none" stroke="#00f2fe" stroke-width="2.5"/>
+  <rect x="206" y="156" width="22" height="14" rx="4" fill="none" stroke="#00f2fe" stroke-width="2.5"/>
+  <line x1="194" y1="163" x2="206" y2="163" stroke="#00f2fe" stroke-width="2.5"/>
+  <!-- Subtle Smile -->
+  <path d="M192 195 Q200 202, 208 195" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
