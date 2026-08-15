@@ -38,23 +38,27 @@ function initParticleCanvas() {
         this.vy = (Math.random() - 0.5) * 0.8;
         this.radius = Math.random() * 2.2 + 1;
 
-        const colorRand = Math.random();
-        if (colorRand < 0.45) {
-          this.color = 'rgba(0, 242, 254, '; // Neon Cyan
-        } else if (colorRand < 0.8) {
-          this.color = 'rgba(59, 130, 246, '; // Electric Blue
-        } else {
-          this.color = 'rgba(139, 92, 246, '; // Cosmic Violet
-        }
-
+        this.colorType = Math.random();
         this.alpha = Math.random() * 0.6 + 0.3;
       }
 
+      getColorPrefix() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (this.colorType < 0.45) {
+          return isLight ? 'rgba(2, 132, 199, ' : 'rgba(0, 242, 254, ';
+        } else if (this.colorType < 0.8) {
+          return isLight ? 'rgba(37, 99, 235, ' : 'rgba(59, 130, 246, ';
+        } else {
+          return isLight ? 'rgba(124, 58, 237, ' : 'rgba(139, 92, 246, ';
+        }
+      }
+
       draw() {
+        const colorPrefix = this.getColorPrefix();
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color + this.alpha + ')';
-        ctx.shadowColor = this.color + '0.8)';
+        ctx.fillStyle = colorPrefix + this.alpha + ')';
+        ctx.shadowColor = colorPrefix + '0.8)';
         ctx.shadowBlur = 4;
         ctx.fill();
         ctx.shadowBlur = 0;
@@ -117,9 +121,10 @@ function initParticleCanvas() {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < maxDist) {
-          const opacity = (1 - dist / maxDist) * 0.28;
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+          const opacity = (1 - dist / maxDist) * (isLight ? 0.22 : 0.28);
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(0, 242, 254, ${opacity})`;
+          ctx.strokeStyle = isLight ? `rgba(2, 132, 199, ${opacity})` : `rgba(0, 242, 254, ${opacity})`;
           ctx.lineWidth = 0.9;
           ctx.moveTo(particles[a].x, particles[a].y);
           ctx.lineTo(particles[b].x, particles[b].y);
@@ -133,9 +138,10 @@ function initParticleCanvas() {
         const dy = mouse.y - particles[a].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < mouse.radius) {
-          const mouseOpacity = (1 - dist / mouse.radius) * 0.35;
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+          const mouseOpacity = (1 - dist / mouse.radius) * (isLight ? 0.3 : 0.35);
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(139, 92, 246, ${mouseOpacity})`;
+          ctx.strokeStyle = isLight ? `rgba(124, 58, 237, ${mouseOpacity})` : `rgba(139, 92, 246, ${mouseOpacity})`;
           ctx.lineWidth = 1.1;
           ctx.moveTo(particles[a].x, particles[a].y);
           ctx.lineTo(mouse.x, mouse.y);

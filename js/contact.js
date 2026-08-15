@@ -151,16 +151,18 @@ function initContactForm() {
       submitBtn.disabled = true;
 
       const serviceSelect = document.getElementById('service-select');
-      const selectedService = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : 'General Inquiry';
+      const selectedService = serviceSelect && serviceSelect.selectedIndex >= 0
+        ? (serviceSelect.options[serviceSelect.selectedIndex].text || serviceSelect.value)
+        : 'Web Development';
 
       const payload = {
-        name: nameInput.value.trim(),
-        email: emailInput.value.trim(),
-        phone: phoneInput && phoneInput.value.trim() ? phoneInput.value.trim() : 'Not provided',
-        service: selectedService,
-        subject: subjectInput.value.trim(),
-        message: messageInput.value.trim(),
-        _subject: `NextZenify Project Inquiry: ${subjectInput.value.trim()} (from ${nameInput.value.trim()})`,
+        Client_Name: nameInput.value.trim(),
+        Work_Email: emailInput.value.trim(),
+        Phone_Number: phoneInput && phoneInput.value.trim() ? phoneInput.value.trim() : 'Not provided',
+        Service_Interested_In: selectedService,
+        Subject: subjectInput.value.trim(),
+        Project_Scope_and_Message: messageInput.value.trim(),
+        _subject: `NextZenify Inquiry [${selectedService}]: ${subjectInput.value.trim()} (from ${nameInput.value.trim()})`,
         _captcha: 'false',
         _template: 'table'
       };

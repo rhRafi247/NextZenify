@@ -6,6 +6,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initPreloader();
   initStickyNavbar();
   initMobileNav();
@@ -517,3 +518,65 @@ async def deploy_agent(intent: str) -> dict:
   renderSnippet(0, false);
   startTimer();
 }
+
+/**
+ * 10. Modern Dark / Light Mode Theme Switching Engine
+ */
+function initThemeToggle() {
+  const root = document.documentElement;
+  const savedTheme = localStorage.getItem('nextzenify-theme');
+  const systemPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+  // Resolve initial theme
+  const initialTheme = savedTheme || (systemPrefersLight ? 'light' : 'dark');
+  setTheme(initialTheme, false);
+
+  // Attach click listener to all theme buttons across desktop navbar and mobile drawer
+  const toggleButtons = document.querySelectorAll('#theme-toggle-btn, #mobile-theme-toggle-btn, .theme-toggle-btn');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentTheme = root.getAttribute('data-theme') || 'dark';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(nextTheme, true);
+    });
+  });
+
+  // OS theme change listener (if not manually overridden)
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('nextzenify-theme')) {
+        setTheme(e.matches ? 'light' : 'dark', false);
+      }
+    });
+  }
+}
+
+function setTheme(theme, save = true) {
+  const root = document.documentElement;
+  root.setAttribute('data-theme', theme);
+  if (save) {
+    localStorage.setItem('nextzenify-theme', theme);
+  }
+
+  // Switch Brand Logo dynamically for active theme
+  const navLogos = document.querySelectorAll('.nav-brand img');
+  navLogos.forEach(img => {
+    img.src = theme === 'light' ? 'images/logo/logo-light.svg' : 'images/logo/logo.svg';
+  });
+
+  // Update mobile drawer button label if present
+  const mobileLabel = document.querySelector('.mobile-theme-btn .theme-label');
+  if (mobileLabel) {
+    mobileLabel.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+
+  // Update button titles and ARIA labels
+  const toggleButtons = document.querySelectorAll('.theme-toggle-btn');
+  toggleButtons.forEach(btn => {
+    const targetMode = theme === 'dark' ? 'Light' : 'Dark';
+    btn.setAttribute('aria-label', `Switch to ${targetMode} Mode`);
+    btn.setAttribute('title', `Switch to ${targetMode} Mode`);
+  });
+}
+
