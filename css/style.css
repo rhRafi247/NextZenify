@@ -42,6 +42,12 @@
   --border-glass-hover: rgba(0, 242, 254, 0.4);
   --border-glass-active: rgba(139, 92, 246, 0.5);
 
+  /* Form Input Tokens */
+  --bg-input: rgba(13, 18, 36, 0.7);
+  --bg-input-focus: rgba(19, 27, 54, 0.95);
+  --border-input: var(--border-glass);
+  --placeholder-color: #64748b;
+
   /* Shadows & Glows */
   --glow-cyan: 0 0 25px rgba(0, 242, 254, 0.35);
   --glow-blue: 0 0 25px rgba(59, 130, 246, 0.35);
@@ -107,6 +113,12 @@
   --border-glass: rgba(15, 23, 42, 0.08);
   --border-glass-hover: rgba(2, 132, 199, 0.5);
   --border-glass-active: rgba(124, 58, 237, 0.5);
+
+  /* Form Input Tokens (Light Mode) */
+  --bg-input: #ffffff;
+  --bg-input-focus: #ffffff;
+  --border-input: rgba(15, 23, 42, 0.16);
+  --placeholder-color: #94a3b8;
 
   /* Clean Drop Shadows */
   --glow-cyan: 0 4px 20px rgba(2, 132, 199, 0.2);
@@ -297,6 +309,39 @@
   color: #ffffff;
 }
 
+/* Light Theme Form Controls */
+[data-theme="light"] .form-card {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06) !important;
+}
+
+[data-theme="light"] .form-label {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .form-control {
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .form-control:focus {
+  background-color: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18) !important;
+}
+
+[data-theme="light"] .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme="light"] select.form-control option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
 /* --------------------------------------------------------------------------
    2. RESET & BASE HTML
    -------------------------------------------------------------------------- */
@@ -325,18 +370,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* Hide default cursor on desktop when custom cursor is active */
-@media (hover: hover) and (pointer: fine) {
-  body.has-custom-cursor,
-  body.has-custom-cursor a,
-  body.has-custom-cursor button,
-  body.has-custom-cursor input,
-  body.has-custom-cursor textarea,
-  body.has-custom-cursor select {
-    cursor: none !important;
-  }
 }
 
 a {
@@ -606,49 +639,6 @@ p {
   animation: loadProgress 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* --------------------------------------------------------------------------
-   7. CUSTOM CURSOR
-   -------------------------------------------------------------------------- */
-.custom-cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--accent-cyan);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s ease, background-color 0.2s;
-  box-shadow: 0 0 10px var(--accent-cyan);
-}
-
-.custom-cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid rgba(0, 242, 254, 0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s,
-              background-color 0.3s,
-              transform 0.15s ease-out;
-}
-
-.custom-cursor-ring.hovered {
-  width: 60px;
-  height: 60px;
-  border-color: var(--accent-purple);
-  background-color: rgba(139, 92, 246, 0.12);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-}
 
 /* --------------------------------------------------------------------------
    8. CANVAS & BACKGROUND GRAPHICS
@@ -1901,11 +1891,22 @@ p {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-glass);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
   transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  display: block;
+  transition: transform var(--transition-fast), fill var(--transition-fast);
 }
 
 .social-link:hover {
@@ -1914,6 +1915,28 @@ p {
   border-color: transparent;
   transform: translateY(-3px);
   box-shadow: var(--glow-cyan);
+}
+
+.social-link:hover svg {
+  fill: #080b14;
+  transform: scale(1.1);
+}
+
+[data-theme="light"] .social-link {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #475569;
+}
+
+[data-theme="light"] .social-link:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .social-link:hover svg {
+  fill: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
@@ -2120,18 +2143,35 @@ p {
 .form-control {
   width: 100%;
   padding: 14px 18px;
-  background: rgba(8, 11, 20, 0.6);
-  border: 1px solid var(--border-glass);
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-input);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
   font-size: 0.98rem;
+  font-family: inherit;
   transition: all var(--transition-fast);
+}
+
+.form-control::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
 }
 
 .form-control:focus {
   border-color: var(--accent-cyan);
   box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
-  background: rgba(13, 18, 36, 0.9);
+  background-color: var(--bg-input-focus);
+  outline: none;
+}
+
+select.form-control {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+}
+
+select.form-control option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .form-control.valid {
@@ -2910,22 +2950,5 @@ textarea.form-control {
   .newsletter-input,
   .newsletter-form .btn {
     width: 100% !important;
-  }
-}
-
-@media (hover: none) or (pointer: coarse) {
-  .custom-cursor-dot,
-  .custom-cursor-ring {
-    display: none !important;
-  }
-
-  body,
-  body.has-custom-cursor,
-  body a,
-  body button,
-  body input,
-  body textarea,
-  body select {
-    cursor: auto !important;
   }
 }

@@ -685,21 +685,6 @@ img, svg, video, canvas {
    6. TOUCH DEVICE OPTIMIZATION (NO HOVER POINTER)
    -------------------------------------------------------------------------- */
 @media (hover: none) or (pointer: coarse) {
-  .custom-cursor-dot,
-  .custom-cursor-ring {
-    display: none !important;
-  }
-
-  body,
-  body.has-custom-cursor,
-  body a,
-  body button,
-  body input,
-  body textarea,
-  body select {
-    cursor: auto !important;
-  }
-
   .tilt-card:active {
     transform: scale(0.98);
   }

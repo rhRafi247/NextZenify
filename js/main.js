@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initStickyNavbar();
   initMobileNav();
-  initCustomCursor();
   initBackToTop();
   highlightActiveNavLink();
   initPageTransitions();
@@ -115,71 +114,6 @@ function initMobileNav() {
   });
 }
 
-/**
- * 4. Desktop Modern Custom Cursor (Dot & Smooth Trailing Halo)
- */
-function initCustomCursor() {
-  // Check if device supports fine hover pointer
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    return;
-  }
-
-  document.body.classList.add('has-custom-cursor');
-
-  const dot = document.createElement('div');
-  dot.className = 'custom-cursor-dot';
-  document.body.appendChild(dot);
-
-  const ring = document.createElement('div');
-  ring.className = 'custom-cursor-ring';
-  document.body.appendChild(ring);
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-  });
-
-  // Smooth lerp trailing loop for the ring
-  const renderCursor = () => {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
-    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
-    requestAnimationFrame(renderCursor);
-  };
-  requestAnimationFrame(renderCursor);
-
-  // Expand ring when hovering interactive elements
-  const hoverTargets = 'a, button, input, textarea, select, .project-card, .service-card, .team-card, .filter-btn, .faq-header';
-
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(hoverTargets)) {
-      ring.classList.add('hovered');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(hoverTargets)) {
-      ring.classList.remove('hovered');
-    }
-  });
-
-  // Hide cursor when mouse leaves window
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity = '0';
-    ring.style.opacity = '0';
-  });
-
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity = '1';
-    ring.style.opacity = '1';
-  });
-}
 
 /**
  * 5. Floating Back-to-Top Button
