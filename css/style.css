@@ -1806,9 +1806,20 @@ p {
 .project-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12px;
   padding-top: 16px;
   border-top: 1px solid var(--border-glass);
+  width: 100%;
+}
+
+.project-actions .btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------------
